@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>profile_page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f0f0f0;
+      color: #333;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-theme {
+      background: #121212;
+      color: #f0f0f0;
+    }
+    .dark-theme .profile-container {
+      background: #1e1e1e;
+      color: #e0e0e0;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .dark-theme .profile-container a {
+      color: #80cbc4;
+    }
+    .dark-theme .profile-container a:hover {
+      color: #4db6ac;
+    }
+    #greeting-message {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  animation: fadeScaleIn 1s ease-out forwards;
+}
+    .profile-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: left;
+    }
+    h1, h2 {
+      animation: fadeInDown 1s ease-out both;
+    }
+    section {
+      opacity: 0;
+      transform: translateX(-30px);
+      animation: slideIn 0.8s ease-out forwards;
+    }
+    @keyframes fadeInDown {
+      from {opacity:0;transform:translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeInImage {
+      from{ opacity:0; transform:scale(0.8);}
+      to { opacity: 1; transform:scale(1);}
+    }
+    @keyframes fadeScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+    #profile-pic {
+      display: block;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: fadeInImage 1.5s ease-out both;
+    }
+    button {
+      margin: 10px 0 0;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      background: #007BFF;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+      animation: none;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    [contenteditable="true"] {
+      background: #fff8dc;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <p id="greeting-message"></p>
+  <div class="profile-container">
+    <img id="profile-pic" src="pic.jpg" alt="Profile Picture">
+    <h1 id="name"></h1>
+    <button id="gret">Click Here</button>
+    <section id="description">
+      <p>Hello! I'm Pratik. I'm currently a first-year undergraduate student in the Department of Electrical Engineering at IIT Kanpur.</p>
+    </section>
+    <section id="hobbies">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>Music</li>
+        <li>Cricket</li>
+        <li>Gaming</li>
+      </ul>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>Mindful Pics</li>
+        <li>ACA253</li>
+        <li>WEBCode</li>
+      </ul>
+    </section>
+    <section id="contacts">
+      <h2>Contacts</h2>
+      <p>Email: pratik24@iitk.ac.in </p>
+      <p>Phone: +918003930382</p>
+      <p><a href="https://www.linkedin.com/in/pratik-beniwal-806a4b316" target="_blank" >My LinkedIn Page</a></p>
+      <p><a href="https://github.com/pratikb24" target="_blank" >My GitHub Page</a></p>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>C</li>
+        <li>C++</li>
+        <li>Python</li>
+      </ul>
+      <button id="edit-skills-btn">Edit Skills</button>
+      <button id="theme-switch-btn">Toggle Theme</button>
+    </section>
+    <section id="courses">
+      <h2>Courses</h2>
+      <div id="courses-container">
+        <ul id="courses-list">
+          <li>ESC111M</li>
+          <li>ESC112M</li>
+          <li>PHY113</li>
+          <li>PHY114</li>
+          <li>MTH111/2/3/4</li>
+          <li>TA111</li>
+          <li>LIF111</li>
+          <li>CHM112/3</li>
+          <li>ELC112</li>
+        </ul>
+      </div>
+      <button id="readmore-btn">Read More</button>
+      <button id="edit-courses-btn">Edit Courses</button>
+    </section>
+  </div>
+  <script src="script1.js"></script>
+</body>
+</html>
